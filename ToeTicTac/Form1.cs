@@ -36,13 +36,27 @@ namespace ToeTicTac
             if (count % 2 == 0 && turn.Text.Equals(""))
             {
                 turn.Text = "X";
+                checkwin();
             }
             else if (count % 2 != 0 && turn.Text.Equals(""))
             {
                 turn.Text = "O";
+                checkwin();
             }
 
             count++;
         }
+
+        bool win = false;
+
+        public void checkwin()
+        {
+            if (!button1.Text.Equals("") && button1.Text.Equals(button2.Text) && button1.Text.Equals(button3.Text))
+            {
+                MessageBox.Show("Winner Winner Chicken Dinner");
+                win = true;
+            }
+        }
+        
     }
 }
