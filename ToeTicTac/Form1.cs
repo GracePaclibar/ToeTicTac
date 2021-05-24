@@ -91,7 +91,24 @@ namespace ToeTicTac
                 MessageBox.Show("Winner Winner Chicken Dinner");
                 win = true;
             }
+            if (NumOfTurns() == 9 && win == false)
+            {
+                MessageBox.Show("Do it again and do it better");
+            }
         }
-        
+
+        public int NumOfTurns()
+        {
+            int NumberOfTurns = 0;
+            foreach(Control click in panel1.Controls)
+            {
+                if(click is Button)
+                {
+                    NumberOfTurns += click.Text.Length;
+                }
+            }
+            return NumberOfTurns;
+        }
+
     }
 }
