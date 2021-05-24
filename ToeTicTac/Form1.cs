@@ -56,6 +56,16 @@ namespace ToeTicTac
                 MessageBox.Show("Winner Winner Chicken Dinner");
                 win = true;
             }
+            if(!button1.Text.Equals("") && button1.Text.Equals(button5.Text) && button1.Text.Equals(button9.Text))
+            {
+                MessageBox.Show("Winner Winner Chicken Dinner");
+                win = true;
+            }
+            if(!button1.Text.Equals("") && button1.Text.Equals(button4.Text) && button1.Text.Equals(button7.Text))
+            {
+                MessageBox.Show("Winner Winner Chicken dinner");
+                win = true;
+            }
         }
         
     }
