@@ -63,7 +63,22 @@ namespace ToeTicTac
             }
             if(!button1.Text.Equals("") && button1.Text.Equals(button4.Text) && button1.Text.Equals(button7.Text))
             {
-                MessageBox.Show("Winner Winner Chicken dinner");
+                MessageBox.Show("Winner Winner Chicken Dinner");
+                win = true;
+            }
+            if(!button2.Text.Equals("") && button2.Text.Equals(button5.Text) && button2.Text.Equals(button8.Text))
+            {
+                MessageBox.Show("Winner Winner Chicken Dinner");
+                win = true;
+            }
+            if(!button3.Text.Equals("") && button3.Text.Equals(button6.Text) && button3.Text.Equals(button9.Text))
+            {
+                MessageBox.Show("Winner Winner Chicken Dinner");
+                win = true;
+            }
+            if(!button3.Text.Equals("") && button3.Text.Equals(button5.Text) && button3.Text.Equals(button7.Text))
+            {
+                MessageBox.Show("Winner Winner Chicken Dinner");
                 win = true;
             }
         }

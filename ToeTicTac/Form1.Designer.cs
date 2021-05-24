@@ -143,7 +143,7 @@ namespace ToeTicTac
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(234, 233);
+            this.ClientSize = new System.Drawing.Size(230, 229);
             this.Controls.Add(this.panel1);
             this.Name = "TicTacToe";
             this.Text = "Tic Tac Toe";
