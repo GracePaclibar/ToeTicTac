@@ -19,7 +19,9 @@ namespace ToeTicTac
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            foreach(Control click in panel1.Controls)
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+
+            foreach (Control click in panel1.Controls)
             {
                 if(click is Button)
                 {
@@ -59,6 +61,10 @@ namespace ToeTicTac
                     count = 0;
                     Application.Restart();
                 }
+                if (dialogResult == DialogResult.No)
+                {
+                    Application.Exit();
+                }
                 win = true;
             }
             if (!button1.Text.Equals("") && button1.Text.Equals(button5.Text) && button1.Text.Equals(button9.Text))
@@ -69,7 +75,11 @@ namespace ToeTicTac
                     count = 0;
                     Application.Restart();
                 }
-                    win = true;
+                if (dialogResult == DialogResult.No)
+                {
+                    Application.Exit();
+                }
+                win = true;
             }
             if (!button1.Text.Equals("") && button1.Text.Equals(button4.Text) && button1.Text.Equals(button7.Text))
             {
@@ -78,6 +88,10 @@ namespace ToeTicTac
                 {
                     count = 0;
                     Application.Restart();
+                }
+                if (dialogResult == DialogResult.No)
+                {
+                    Application.Exit();
                 }
                 win = true;
             }
@@ -89,6 +103,10 @@ namespace ToeTicTac
                     count = 0;
                     Application.Restart();
                 }
+                if (dialogResult == DialogResult.No)
+                {
+                    Application.Exit();
+                }
                 win = true;
             }
             if (!button3.Text.Equals("") && button3.Text.Equals(button6.Text) && button3.Text.Equals(button9.Text))
@@ -98,6 +116,10 @@ namespace ToeTicTac
                 {
                     count = 0;
                     Application.Restart();
+                }
+                if (dialogResult == DialogResult.No)
+                {
+                    Application.Exit();
                 }
                 win = true;
             }
@@ -109,6 +131,10 @@ namespace ToeTicTac
                     count = 0;
                     Application.Restart();
                 }
+                if (dialogResult == DialogResult.No)
+                {
+                    Application.Exit();
+                }
                 win = true;
             }
             if (!button4.Text.Equals("") && button4.Text.Equals(button5.Text) && button4.Text.Equals(button6.Text))
@@ -118,6 +144,10 @@ namespace ToeTicTac
                 {
                     count = 0;
                     Application.Restart();
+                }
+                if (dialogResult == DialogResult.No)
+                {
+                    Application.Exit();
                 }
                 win = true;
             }
@@ -129,6 +159,10 @@ namespace ToeTicTac
                     count = 0;
                     Application.Restart();
                 }
+                if (dialogResult == DialogResult.No)
+                {
+                    Application.Exit();
+                }
                 win = true;
             }
             if (NumOfTurns() == 9 && win == false)
@@ -138,6 +172,10 @@ namespace ToeTicTac
                 {
                     count = 0;
                     Application.Restart();
+                }
+                if (dialogResult == DialogResult.No)
+                {
+                    Application.Exit();
                 }
             }
         }
