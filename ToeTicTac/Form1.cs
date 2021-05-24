@@ -56,27 +56,37 @@ namespace ToeTicTac
                 MessageBox.Show("Winner Winner Chicken Dinner");
                 win = true;
             }
-            if(!button1.Text.Equals("") && button1.Text.Equals(button5.Text) && button1.Text.Equals(button9.Text))
+            if (!button1.Text.Equals("") && button1.Text.Equals(button5.Text) && button1.Text.Equals(button9.Text))
             {
                 MessageBox.Show("Winner Winner Chicken Dinner");
                 win = true;
             }
-            if(!button1.Text.Equals("") && button1.Text.Equals(button4.Text) && button1.Text.Equals(button7.Text))
+            if (!button1.Text.Equals("") && button1.Text.Equals(button4.Text) && button1.Text.Equals(button7.Text))
             {
                 MessageBox.Show("Winner Winner Chicken Dinner");
                 win = true;
             }
-            if(!button2.Text.Equals("") && button2.Text.Equals(button5.Text) && button2.Text.Equals(button8.Text))
+            if (!button2.Text.Equals("") && button2.Text.Equals(button5.Text) && button2.Text.Equals(button8.Text))
             {
                 MessageBox.Show("Winner Winner Chicken Dinner");
                 win = true;
             }
-            if(!button3.Text.Equals("") && button3.Text.Equals(button6.Text) && button3.Text.Equals(button9.Text))
+            if (!button3.Text.Equals("") && button3.Text.Equals(button6.Text) && button3.Text.Equals(button9.Text))
             {
                 MessageBox.Show("Winner Winner Chicken Dinner");
                 win = true;
             }
-            if(!button3.Text.Equals("") && button3.Text.Equals(button5.Text) && button3.Text.Equals(button7.Text))
+            if (!button3.Text.Equals("") && button3.Text.Equals(button5.Text) && button3.Text.Equals(button7.Text))
+            {
+                MessageBox.Show("Winner Winner Chicken Dinner");
+                win = true;
+            }
+            if (!button4.Text.Equals("") && button4.Text.Equals(button5.Text) && button4.Text.Equals(button6.Text))
+            {
+                MessageBox.Show("Winner Winner Chicken Dinner");
+                win = true;
+            }
+            if (!button7.Text.Equals("") && button7.Text.Equals(button8.Text) && button7.Text.Equals(button9))
             {
                 MessageBox.Show("Winner Winner Chicken Dinner");
                 win = true;
