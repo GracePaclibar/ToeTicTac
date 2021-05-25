@@ -55,6 +55,7 @@ namespace ToeTicTac
         {
             if (!button1.Text.Equals("") && button1.Text.Equals(button2.Text) && button1.Text.Equals(button3.Text))
             {
+                winning(button1, button2, button3);
                 DialogResult dialogResult = MessageBox.Show("Winner Winner Chicken Dinner! \nPlay again?", "You Win!", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
@@ -191,6 +192,13 @@ namespace ToeTicTac
                 }
             }
             return NumberOfTurns;
+        }
+
+        public void winning(Button one, Button two, Button three)
+        {
+            one.BackColor = Color.Green;
+            two.BackColor = Color.Green;
+            three.BackColor = Color.Green;
         }
 
     }
