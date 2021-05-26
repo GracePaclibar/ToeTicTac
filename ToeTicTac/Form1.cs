@@ -23,7 +23,7 @@ namespace ToeTicTac
 
             foreach (Control click in panel1.Controls)
             {
-                if(click is Button)
+                if (click is Button)
                 {
                     click.Click += new System.EventHandler(turn_Click);
                 }
@@ -39,14 +39,17 @@ namespace ToeTicTac
             {
                 turn.Text = "X";
                 checkwin();
+                count++;
+
             }
             else if (count % 2 != 0 && turn.Text.Equals(""))
             {
                 turn.Text = "O";
                 checkwin();
+                count++;
+
             }
 
-            count++;
         }
 
         bool win = false;
