@@ -12,9 +12,8 @@ namespace ToeTicTac
 {
     public partial class TicTacToe : Form
     {
-        public int count = 0;
-        public bool win = false;
-        public string Turn = "";
+
+        myClass ttt = new myClass();
 
         public TicTacToe()
         {
@@ -38,26 +37,10 @@ namespace ToeTicTac
         public void turn_Click(object sender, EventArgs e)
         {
             Button turn = (Button)sender;
-            Turn = turn.Text;
-            Turns();
-            turn.Text = Turn;
+            ttt.Turn = turn.Text;
+            ttt.Turns();
+            turn.Text = ttt.Turn;
             checkwin();
-        }
-
-        public void Turns()
-        {
-            if (count % 2 == 0 && Turn.Equals(""))
-            {
-                Turn = "X";
-                count++;
-
-            }
-            else if (count % 2 != 0 && Turn.Equals(""))
-            {
-                Turn = "O";
-                count++;
-
-            }
         }
 
         public void checkwin()
@@ -68,14 +51,14 @@ namespace ToeTicTac
                 DialogResult dialogResult = MessageBox.Show("Winner Winner Chicken Dinner! \nPlay again?", "You Win!", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    count = 0;
+                    ttt.count = 0;
                     Application.Restart();
                 }
                 if (dialogResult == DialogResult.No)
                 {
                     Application.Exit();
                 }
-                win = true;
+                ttt.win = true;
             }
             if (!button1.Text.Equals("") && button1.Text.Equals(button5.Text) && button1.Text.Equals(button9.Text))
             {
@@ -83,14 +66,14 @@ namespace ToeTicTac
                 DialogResult dialogResult = MessageBox.Show("Winner Winner Chicken Dinner! \nPlay again?", "You Win!", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    count = 0;
+                    ttt.count = 0;
                     Application.Restart();
                 }
                 if (dialogResult == DialogResult.No)
                 {
                     Application.Exit();
                 }
-                win = true;
+                ttt.win = true;
             }
             if (!button1.Text.Equals("") && button1.Text.Equals(button4.Text) && button1.Text.Equals(button7.Text))
             {
@@ -98,14 +81,14 @@ namespace ToeTicTac
                 DialogResult dialogResult = MessageBox.Show("Winner Winner Chicken Dinner! \nPlay again?", "You Win!", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    count = 0;
+                    ttt.count = 0;
                     Application.Restart();
                 }
                 if (dialogResult == DialogResult.No)
                 {
                     Application.Exit();
                 }
-                win = true;
+                ttt.win = true;
             }
             if (!button2.Text.Equals("") && button2.Text.Equals(button5.Text) && button2.Text.Equals(button8.Text))
             {
@@ -113,14 +96,14 @@ namespace ToeTicTac
                 DialogResult dialogResult = MessageBox.Show("Winner Winner Chicken Dinner! \nPlay again?", "You Win!", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    count = 0;
+                    ttt.count = 0;
                     Application.Restart();
                 }
                 if (dialogResult == DialogResult.No)
                 {
                     Application.Exit();
                 }
-                win = true;
+                ttt.win = true;
             }
             if (!button3.Text.Equals("") && button3.Text.Equals(button6.Text) && button3.Text.Equals(button9.Text))
             {
@@ -128,14 +111,14 @@ namespace ToeTicTac
                 DialogResult dialogResult = MessageBox.Show("Winner Winner Chicken Dinner! \nPlay again?", "You Win!", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    count = 0;
+                    ttt.count = 0;
                     Application.Restart();
                 }
                 if (dialogResult == DialogResult.No)
                 {
                     Application.Exit();
                 }
-                win = true;
+                ttt.win = true;
             }
             if (!button3.Text.Equals("") && button3.Text.Equals(button5.Text) && button3.Text.Equals(button7.Text))
             {
@@ -143,14 +126,14 @@ namespace ToeTicTac
                 DialogResult dialogResult = MessageBox.Show("Winner Winner Chicken Dinner! \nPlay again?", "You Win!", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    count = 0;
+                    ttt.count = 0;
                     Application.Restart();
                 }
                 if (dialogResult == DialogResult.No)
                 {
                     Application.Exit();
                 }
-                win = true;
+                ttt.win = true;
             }
             if (!button4.Text.Equals("") && button4.Text.Equals(button5.Text) && button4.Text.Equals(button6.Text))
             {
@@ -158,14 +141,14 @@ namespace ToeTicTac
                 DialogResult dialogResult = MessageBox.Show("Winner Winner Chicken Dinner! \nPlay again?", "You Win!", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    count = 0;
+                    ttt.count = 0;
                     Application.Restart();
                 }
                 if (dialogResult == DialogResult.No)
                 {
                     Application.Exit();
                 }
-                win = true;
+                ttt.win = true;
             }
             if (!button7.Text.Equals("") && button7.Text.Equals(button8.Text) && button7.Text.Equals(button9))
             {
@@ -173,21 +156,21 @@ namespace ToeTicTac
                 DialogResult dialogResult = MessageBox.Show("Winner Winner Chicken Dinner! \nPlay again?", "You Win!", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    count = 0;
+                    ttt.count = 0;
                     Application.Restart();
                 }
                 if (dialogResult == DialogResult.No)
                 {
                     Application.Exit();
                 }
-                win = true;
+                ttt.win = true;
             }
-            if (NumOfTurns() == 9 && win == false)
+            if (NumOfTurns() == 9 && ttt.win == false)
             {
                 DialogResult dialogResult = MessageBox.Show("Do it again and do it better! \nPlay again?", "It's a Draw!", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    count = 0;
+                    ttt.count = 0;
                     Application.Restart();
                 }
                 if (dialogResult == DialogResult.No)
