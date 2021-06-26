@@ -33,19 +33,8 @@ namespace ToeTicTac
             }
         }
 
-        public string One = "";
-        public string Two = "";
-        public string Three = "";
-        public string Four = "";
-        public string Five = "";
-        public string Six = "";
-        public string Seven = "";
-        public string Eight = "";
-        public string Nine = "";
-
         public void turn_Click(object sender, EventArgs e)
         {
-            
             Button turn = (Button)sender;
             ttt.Turn = turn.Text;
             ttt.Turns();

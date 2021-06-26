@@ -13,7 +13,6 @@ namespace ToeTicTac
         public bool win = false;
         public string DiaResult = "";
 
-
         public void Turns()
         {
             if (count % 2 == 0 && Turn.Equals(""))
@@ -57,8 +56,5 @@ namespace ToeTicTac
             }
             win = true;
         }
-
-
-
     }
 }
