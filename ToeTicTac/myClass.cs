@@ -11,6 +11,8 @@ namespace ToeTicTac
         public int count = 0;
         public string Turn = "";
         public bool win = false;
+        public string DiaResult = "";
+
 
         public void Turns()
         {
@@ -25,6 +27,20 @@ namespace ToeTicTac
                 Turn = "O";
                 count++;
 
+            }
+        }
+
+        public void WinFalse()
+        {
+
+            if (DiaResult == "Yes")
+            {
+                count = 0;
+                TicTacToe.Restart();
+            }
+            if (DiaResult == "No")
+            {
+                TicTacToe.Exit();
             }
         }
 

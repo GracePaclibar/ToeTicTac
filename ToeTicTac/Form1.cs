@@ -48,135 +48,56 @@ namespace ToeTicTac
             if (!button1.Text.Equals("") && button1.Text.Equals(button2.Text) && button1.Text.Equals(button3.Text))
             {
                 winning(button1, button2, button3);
-                DialogResult dialogResult = MessageBox.Show("Winner Winner Chicken Dinner! \nPlay again?", "You Win!", MessageBoxButtons.YesNo);
-                if (dialogResult == DialogResult.Yes)
-                {
-                    ttt.count = 0;
-                    Application.Restart();
-                }
-                if (dialogResult == DialogResult.No)
-                {
-                    Application.Exit();
-                }
-                ttt.win = true;
+                WinTrue();
             }
             if (!button1.Text.Equals("") && button1.Text.Equals(button5.Text) && button1.Text.Equals(button9.Text))
             {
                 winning(button1, button5, button9);
-                DialogResult dialogResult = MessageBox.Show("Winner Winner Chicken Dinner! \nPlay again?", "You Win!", MessageBoxButtons.YesNo);
-                if (dialogResult == DialogResult.Yes)
-                {
-                    ttt.count = 0;
-                    Application.Restart();
-                }
-                if (dialogResult == DialogResult.No)
-                {
-                    Application.Exit();
-                }
-                ttt.win = true;
+                WinTrue();
+
             }
             if (!button1.Text.Equals("") && button1.Text.Equals(button4.Text) && button1.Text.Equals(button7.Text))
             {
                 winning(button1, button4, button7);
                 DialogResult dialogResult = MessageBox.Show("Winner Winner Chicken Dinner! \nPlay again?", "You Win!", MessageBoxButtons.YesNo);
-                if (dialogResult == DialogResult.Yes)
-                {
-                    ttt.count = 0;
-                    Application.Restart();
-                }
-                if (dialogResult == DialogResult.No)
-                {
-                    Application.Exit();
-                }
-                ttt.win = true;
+                WinTrue();
+
             }
             if (!button2.Text.Equals("") && button2.Text.Equals(button5.Text) && button2.Text.Equals(button8.Text))
             {
                 winning(button2, button5, button8);
-                DialogResult dialogResult = MessageBox.Show("Winner Winner Chicken Dinner! \nPlay again?", "You Win!", MessageBoxButtons.YesNo);
-                if (dialogResult == DialogResult.Yes)
-                {
-                    ttt.count = 0;
-                    Application.Restart();
-                }
-                if (dialogResult == DialogResult.No)
-                {
-                    Application.Exit();
-                }
-                ttt.win = true;
+                WinTrue();
+
             }
             if (!button3.Text.Equals("") && button3.Text.Equals(button6.Text) && button3.Text.Equals(button9.Text))
             {
                 winning(button3, button6, button9);
-                DialogResult dialogResult = MessageBox.Show("Winner Winner Chicken Dinner! \nPlay again?", "You Win!", MessageBoxButtons.YesNo);
-                if (dialogResult == DialogResult.Yes)
-                {
-                    ttt.count = 0;
-                    Application.Restart();
-                }
-                if (dialogResult == DialogResult.No)
-                {
-                    Application.Exit();
-                }
-                ttt.win = true;
+                WinTrue();
+
             }
             if (!button3.Text.Equals("") && button3.Text.Equals(button5.Text) && button3.Text.Equals(button7.Text))
             {
                 winning(button3, button5, button7);
-                DialogResult dialogResult = MessageBox.Show("Winner Winner Chicken Dinner! \nPlay again?", "You Win!", MessageBoxButtons.YesNo);
-                if (dialogResult == DialogResult.Yes)
-                {
-                    ttt.count = 0;
-                    Application.Restart();
-                }
-                if (dialogResult == DialogResult.No)
-                {
-                    Application.Exit();
-                }
-                ttt.win = true;
+                WinTrue();
+
             }
             if (!button4.Text.Equals("") && button4.Text.Equals(button5.Text) && button4.Text.Equals(button6.Text))
             {
                 winning(button4, button5, button6);
-                DialogResult dialogResult = MessageBox.Show("Winner Winner Chicken Dinner! \nPlay again?", "You Win!", MessageBoxButtons.YesNo);
-                if (dialogResult == DialogResult.Yes)
-                {
-                    ttt.count = 0;
-                    Application.Restart();
-                }
-                if (dialogResult == DialogResult.No)
-                {
-                    Application.Exit();
-                }
-                ttt.win = true;
+                WinTrue();
+
             }
             if (!button7.Text.Equals("") && button7.Text.Equals(button8.Text) && button7.Text.Equals(button9))
             {
                 winning(button7, button8, button9);
-                DialogResult dialogResult = MessageBox.Show("Winner Winner Chicken Dinner! \nPlay again?", "You Win!", MessageBoxButtons.YesNo);
-                if (dialogResult == DialogResult.Yes)
-                {
-                    ttt.count = 0;
-                    Application.Restart();
-                }
-                if (dialogResult == DialogResult.No)
-                {
-                    Application.Exit();
-                }
-                ttt.win = true;
+                WinTrue();
+
             }
             if (NumOfTurns() == 9 && ttt.win == false)
             {
                 DialogResult dialogResult = MessageBox.Show("Do it again and do it better! \nPlay again?", "It's a Draw!", MessageBoxButtons.YesNo);
-                if (dialogResult == DialogResult.Yes)
-                {
-                    ttt.count = 0;
-                    Application.Restart();
-                }
-                if (dialogResult == DialogResult.No)
-                {
-                    Application.Exit();
-                }
+                ttt.DiaResult = dialogResult.ToString();
+                ttt.WinFalse();
             }
         }
 
@@ -191,6 +112,46 @@ namespace ToeTicTac
                 }
             }
             return NumberOfTurns;
+        }
+
+
+        public void WinFalse()
+        {
+
+            if (ttt.DiaResult == "Yes")
+            {
+                ttt.count = 0;
+                Application.Restart();
+            }
+            if (ttt.DiaResult == "No")
+            {
+                Application.Exit();
+            }
+        }
+
+        public static void Restart()
+        {
+            Application.Restart();
+        }
+
+        public static void Exit()
+        {
+            Application.Exit();
+        }
+
+        public void WinTrue()
+        {
+            DialogResult dialogResult = MessageBox.Show("Winner Winner Chicken Dinner! \nPlay again?", "You Win!", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                ttt.count = 0;
+                Application.Restart();
+            }
+            if (dialogResult == DialogResult.No)
+            {
+                Application.Exit();
+            }
+            ttt.win = true;
         }
 
         public void winning(Button one, Button two, Button three)
