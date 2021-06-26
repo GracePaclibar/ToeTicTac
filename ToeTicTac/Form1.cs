@@ -12,6 +12,10 @@ namespace ToeTicTac
 {
     public partial class TicTacToe : Form
     {
+        public int count = 0;
+        public bool win = false;
+        public string Turn = "";
+
         public TicTacToe()
         {
             InitializeComponent();
@@ -30,29 +34,31 @@ namespace ToeTicTac
             }
         }
 
-        int count = 0;
 
         public void turn_Click(object sender, EventArgs e)
         {
             Button turn = (Button)sender;
-            if (count % 2 == 0 && turn.Text.Equals(""))
-            {
-                turn.Text = "X";
-                checkwin();
-                count++;
-
-            }
-            else if (count % 2 != 0 && turn.Text.Equals(""))
-            {
-                turn.Text = "O";
-                checkwin();
-                count++;
-
-            }
-
+            Turn = turn.Text;
+            Turns();
+            turn.Text = Turn;
+            checkwin();
         }
 
-        bool win = false;
+        public void Turns()
+        {
+            if (count % 2 == 0 && Turn.Equals(""))
+            {
+                Turn = "X";
+                count++;
+
+            }
+            else if (count % 2 != 0 && Turn.Equals(""))
+            {
+                Turn = "O";
+                count++;
+
+            }
+        }
 
         public void checkwin()
         {
