@@ -44,5 +44,21 @@ namespace ToeTicTac
             }
         }
 
+        public void WinTrue()
+        {
+            if (DiaResult == "Yes")
+            {
+                count = 0;
+                TicTacToe.Restart();
+            }
+            if (DiaResult == "No")
+            {
+                TicTacToe.Exit();
+            }
+            win = true;
+        }
+
+
+
     }
 }
